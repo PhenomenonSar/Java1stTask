@@ -2,22 +2,21 @@ package BellIntegrator;
 
 public class Lorry extends Car {
 
-    private float loadСapacity;
-    public float getLoadСapacity() {return loadСapacity;}
+    private float loadCapacity;
+    public float getLoadCapacity() {return loadCapacity;}
 
-    public Lorry(String brand,float weight,float power,float loadСapacity){
+    public Lorry(String brand,float weight,float power,float loadCapacity){
         super(brand,weight,power);
-        this.loadСapacity=loadСapacity;
+        this.loadCapacity = loadCapacity;
     }
-    public void setLoadСapacity(float newLoadCapacity){
+    public void setLoadCapacity(float newLoadCapacity){
         if(newLoadCapacity>0){
-            this.loadСapacity = newLoadCapacity;
+            this.loadCapacity = newLoadCapacity;
         }
         else {
             System.out.println("Некорректное значение грузоподъемности!");
         }
     }
-
     @Override
     public void setBrand(String newBrand){
         if(newBrand.length()!= 0){
@@ -30,7 +29,7 @@ public class Lorry extends Car {
     @Override
     public void displayCharacteristics(){
         super.displayCharacteristics();
-        System.out.println("Грузоподъемность(кг):"+loadСapacity);
+        System.out.println("Грузоподъемность(кг):"+ loadCapacity);
     }
 
 }
